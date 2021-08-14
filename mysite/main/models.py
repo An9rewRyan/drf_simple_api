@@ -12,7 +12,7 @@ class Diary(models.Model):
     
 class Note(models.Model):
     diary_id = models.ForeignKey(Diary, related_name='notes', on_delete=models.CASCADE)
-    text = models.CharField(max_length=1000000)
+    text = models.TextField()
     
     def __str__(self):
         return '{}: {}'.format(self.pk, self.text)

@@ -24,9 +24,6 @@ class DiaryList(generics.ListCreateAPIView):
             if serializer.validated_data['is_private'] == False:
 
                 del serializer.validated_data['expiration']
-            
-            print(serializer.validated_data)
-
 
             serializer.save()
 
