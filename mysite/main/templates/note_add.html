@@ -1,0 +1,23 @@
+
+{% extends "rest_framework/base.html" %}
+{{block}}
+
+
+
+
+
+
+
+
+
+
+
+
+   
+<form action="http://127.0.0.1:8000/main/notes/{{diary.pk}}/" method="POST">
+    {% csrf_token %}
+    {% render_form serializer %}
+    <input type="submit" value="Save">
+</form>
+
+</body></html>
